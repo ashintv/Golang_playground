@@ -1,10 +1,11 @@
 package main
 
-import "crud_api/configs"
+import (
+	"crud_api/configs"
+	"crud_api/models"
+)
 
-
-func main(){
+func main() {
 	configs.LoadConfig()
-
-	
+	configs.DB.AutoMigrate(&models.Users{}, &models.Post{})
 }
