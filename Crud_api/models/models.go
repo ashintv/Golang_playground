@@ -8,7 +8,7 @@ type Users struct {
 	gorm.Model
 	Username string `json:"username" binding:"required"`
 	Password string `json:"password" binding:"required,min=6"`
-	Post     []Post `gorm:"foreignKey:UserID" "`
+	Post     []Post `gorm:"foreignKey:UserID"`
 }
 
 // posts table
