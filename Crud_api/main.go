@@ -10,8 +10,6 @@ import (
 func main() {
 	router := gin.Default()
 	configs.LoadConfig()
-
-
 	router.POST("/user", controllers.AddUser)
 	router.Run()
 }
